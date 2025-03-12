@@ -1,0 +1,20 @@
+{% extends 'Main/base.html' %}
+
+{% block title %} Empleado {% endblock title %}    
+
+{% block content_title %}
+    Lista de empleados registrados                
+{% endblock content_title %}
+
+{% block content %}
+    <ul class="list-group">
+        {% for empleado in empleados %}
+            <li class="list-group-item d-flex flex-column justify-content-between align-items-start border rounded shadow-sm mb-3">
+                <h5 class="mb-1">Nombre: {{ empleado.nombre }}</h5>
+                <p class="mb-1">Edad: {{ empleado.edad }}</p>
+                <p class="mb-1">Horario de trabajo: {{ empleado.horario_de_trabajo }}</p>
+                <p class="mb-1">Observaciones: {{ empleado.observaciones }}</p>
+            </li>    
+        {% endfor %}
+    </ul>    
+{% endblock content %}

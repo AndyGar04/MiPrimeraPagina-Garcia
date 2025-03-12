@@ -1,0 +1,19 @@
+{% extends 'Main/base.html' %}
+    
+{% block title %} Gerente {% endblock title %}    
+
+{% block content_title %}
+    Lista de gerentes registrados                
+{% endblock content_title %}
+
+{% block content %}
+    <ul class="list-group">
+        {% for gerente in gerentes %}
+            <li class="list-group-item d-flex flex-column justify-content-between align-items-start border rounded shadow-sm mb-3">
+                <h5 class="mb-1">Nombre: {{ gerente.nombre }}</h5>
+                <p class="mb-2 text-muted">Edad: {{ gerente.edad }}</p>
+                <p class="mb-2 text-muted">Observaciones: {{ gerente.observaciones }}</p>
+            </li>    
+        {% endfor %}
+    </ul>    
+{% endblock content %}
