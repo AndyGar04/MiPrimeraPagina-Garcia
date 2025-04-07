@@ -1,0 +1,15 @@
+{% extends 'Main/base.html' %}
+
+{% block content %}
+    {% if form.instance.pk %}
+        <h1>Gerente - Edición</h1>
+    {% else %}
+        <h1>Gerente - Creación</h1>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="{% url 'restaurante:empleado_list' %}"></a>
+{% endblock content %}

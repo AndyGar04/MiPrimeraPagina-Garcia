@@ -1,0 +1,19 @@
+{% extends 'Main/base.html' %}
+
+{% block content %}
+    <h1>Pedido: Vista en Detalle</h1>
+    <ul>
+        <li>Nombre: {{ pedido.nombre }}</li>
+        <li>Horario del pedido: {{ pedido.horario_pedido }}</li>
+        <li><span class="badge {% if pedido.estado == 'E' %}bg-success{% else %}bg-danger{% endif %}">
+                {% if pedido.estado == 'E' %}
+                    Entregado
+                {% else %}
+                    No entregado
+                {% endif %}
+            </span>
+        </li>
+        <li>Empleado a cargo: {{ pedido.empleado_a_cargo }}</li>
+    </ul>
+    <a href="{% url 'restaurante:pedido_list' %}"><button>Volver</button></a>
+{% endblock content %}

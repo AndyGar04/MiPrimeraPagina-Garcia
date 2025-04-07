@@ -1,0 +1,12 @@
+{% extends 'Main/base.html' %}
+
+{% block content %}
+    <h1>Empleado: Vista en Detalle</h1>
+    <ul>
+        <li>Nombre: {{ empleado.nombre }}</li>
+        <li>Edad: {{ empleado.edad }}</li>
+        <li>Observaciones: {{ empleado.observaciones|default:"Sin observaciones" }}</li>
+        <li>Horario de trabajo: {{ empleado.horario_de_trabajo }}</li>
+    </ul>
+    <a href="{% url 'restaurante:empleado_list' %}"><button class="btn btn-secondary">Volver</button></a>
+{% endblock content %}

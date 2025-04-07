@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.bg-image {
+    background-image: url('../Sandwich.png'); /* Ajusta la ruta a la imagen */
+    background-size: cover;
+    background-position: center;
+    position: fixed; /* Se mantiene fixed para que el fondo no se mueva */
+    min-height: 100vh; /* Asegúrate de que al menos ocupe la altura de la ventana */
+    width: 100%; /* Asegura que la imagen cubra todo el ancho */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    /* overflow: hidden;  Eliminado para permitir el scroll */
+}
+
+.bg-blur {
+    filter: blur(10px); /* Aumenta el difuminado */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; /* Asegura que esté detrás del contenido */
+    background-color: rgba(128, 128, 128, 0.5); /* Color gris semitransparente */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+    margin: 0; /* Elimina márgenes */
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    display: block; /* Cambiado a block para evitar el centrado */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+}

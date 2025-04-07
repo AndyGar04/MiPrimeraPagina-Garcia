@@ -1,0 +1,11 @@
+{% extends 'Main/base.html' %}
+
+{% block content %}
+    <h1>Gerente: Vista en Detalle</h1>
+    <ul>
+        <li>Nombre: {{ gerente.nombre }}</li>
+        <li>Edad: {{ gerente.edad }}</li>
+        <li>Observaciones: {{ gerente.observaciones|default:"Sin observaciones" }}</li>
+    </ul>
+    <a href="{% url 'restaurante:gerente_list' %}"><button class="btn btn-secondary">Volver</button></a>
+{% endblock content %}

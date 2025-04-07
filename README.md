@@ -1,4 +1,10 @@
-# Entrega nro 3
+# Entrega Final
+
+# Python Comisión 75140 - Alumno: Andy Garcia. 
+
+# ¿De qué se trata el proyecto?
+
+El proyecto se trata de un "sistema de gestion" basico para un restaurante de tipo "Sandwich".
 
 # Pruebas de la Aplicación "AppCoder"
 
@@ -28,28 +34,26 @@ Para probar la aplicación "AppCoder", sigue estos pasos:
 
 Con estos pasos, habrás probado con éxito la aplicación "AppCoder".
 
-# Consigna
+## Caracteristicas:
 
-Crea una web en Django utilizando Herencia de plantillas, con un modelo de por lo menos 3 clases, un formulario para ingresar datos a las 3 clases y un formulario para buscar algo en la base de datos. No hace falta que la búsqueda abarque las tres clases; con realizar la búsqueda sobre una será suficiente.
+1. Cuenta con la posibilidad de hacer CRUD con absolutamente todos los modelos presentes.
 
-Te sugerimos que hagas una web estilo blog para ir preparando la entrega final.
+2. Cuenta con una estetica moderna y responsiva.
 
-## Objetivos
+3. Es increiblemente mejorable a futuro.
 
-Desarrollar tu primera web en Django utilizando el patrón MVT.
+4. Cuenta con un login funcional.
 
-## Requisitos
+## Mejoras a futuro:
 
-- Link de GitHub con el proyecto totalmente subido a la plataforma.
+1. La posibilidad de transforma el campo de "nombre" a la hora de crear un pedido por una caja selectiva entre otro modelo llamado "Platos" donde se especificaria cuales son los platos disponibles en ese momento.
 
-### Proyecto Web Django con patrón MVT que incluya:
+2. Mejora significativa en la estetica de la pagina en si.
 
-- Herencia de HTML.
-- Por lo menos 3 clases en `models`.
-- Un formulario para insertar datos para cada modelo creado.
-- Un formulario para buscar algo en la base de datos.
-- Un archivo `README` que indique el orden en el que se prueban las cosas y/o dónde están las funcionalidades.
+3. Mejora en el sistema de login.
 
-## Formato
+4. Crear barras "nav" diferentes, tanto para los empleados, como para los hipoteticos chefs o para el gerente en caso de despedir a alguien.
 
-Link al repositorio de GitHub con el nombre “TuPrimeraPagina+Apellido”, por ejemplo “TuPrimeraPagina+Fernandez”.
+5. Mejora a la seguridad del sistema.
+
+6. Entre muchisimas otras mejoras posibles.

@@ -7,11 +7,17 @@
 {% endblock content_title %}
 
 {% block content %}
+    <form method="get" action="{% url 'restaurante:pedido_list' %}">
+        <input type="text" name="busqueda" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+<br>
     <ul class="list-group">
-        {% for pedido in pedidos %}
-            <li class="list-group-item d-flex flex-column justify-content-between align-items-start border rounded shadow-sm mb-3">
+    {% for pedido in pedidos %}
+        <li class="list-group-item d-flex justify-content-between align-items-center border rounded shadow-sm mb-3">
+            <div class="me-auto">
                 <h5 class="mb-1">Nombre del Producto: {{ pedido.nombre }}</h5>
-                <p class="mb-1">Horario del Pedido: {{ pedido.horario_del_pedido }}</p>
+                <p class="mb-1">Horario del Pedido: {{ pedido.horario_pedido }}</p>
                 <p class="mb-1">
                     Estado: 
                     <span class="badge {% if pedido.estado == 'E' %}bg-success{% else %}bg-danger{% endif %}">
@@ -23,7 +29,17 @@
                     </span>
                 </p>
                 <p class="mb-1">Empleado a Cargo: {{ pedido.empleado_a_cargo }}</p>
-            </li>    
-        {% endfor %}
-    </ul>    
+            </div>
+            <div class="btn-group">
+                <a href="{% url 'restaurante:pedido_detail' pedido.id %}" class="btn btn-info btn-sm">Detalles</a>
+                <a href="{% url 'restaurante:pedido_form' pedido.id %}" class="btn btn-warning btn-sm">Actualizar</a>
+                <a href="{% url 'restaurante:pedido_confirm_delete' pedido.id %}" class="btn btn-danger btn-sm">Borrar</a>
+            </div>
+        </li>    
+    {% endfor %}
+    </ul>
+    
+    <div class="mt-4">
+        <a href="{% url 'restaurante:pedido_form' %}" class="btn btn-success">Crear Nuevo Pedido</a>
+    </div>
 {% endblock content %}

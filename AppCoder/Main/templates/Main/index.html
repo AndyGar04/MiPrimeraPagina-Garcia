@@ -8,5 +8,10 @@
     Restaurante            
 {% endblock content_title %}
 
-{% block content %}           
+{% block content %}
+
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+
 {% endblock content %}
